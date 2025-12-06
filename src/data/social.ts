@@ -1,16 +1,17 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { PERSONAL_INFO } from "@/lib/constants";
 import type { SocialLink } from "@/lib/types";
+import { GITHUB_BASE_URL, LINKEDIN_BASE_URL } from "@/lib/utils";
 
 export const socialLinks: SocialLink[] = [
 	{
 		name: "GitHub",
-		url: `https://github.com/${PERSONAL_INFO.githubUsername}`,
+		url: GITHUB_BASE_URL,
 		icon: Github,
 	},
 	{
 		name: "LinkedIn",
-		url: `https://www.linkedin.com/in/${PERSONAL_INFO.linkedinUsername}`,
+		url: LINKEDIN_BASE_URL,
 		icon: Linkedin,
 	},
 	{

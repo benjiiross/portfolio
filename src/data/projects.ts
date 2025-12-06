@@ -1,6 +1,6 @@
 import { Award, Briefcase, Code2 } from "lucide-react";
 import type { Project } from "@/lib/types";
-import { GITHUB_BASE_URL } from "@/lib/utils";
+import { GITHUB_WAVERR_REPO } from "@/lib/utils";
 
 export const projects: Project[] = [
 	{
@@ -15,7 +15,7 @@ export const projects: Project[] = [
 			"Graph-to-Code Engine",
 			"Back-testing System",
 		],
-		github: `${GITHUB_BASE_URL}/waverr-no-code-financial-strategies`,
+		github: GITHUB_WAVERR_REPO,
 	},
 	{
 		title: "SNCF Data Hackathon",

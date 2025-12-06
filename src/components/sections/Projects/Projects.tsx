@@ -1,8 +1,8 @@
 import { ExternalLink } from "lucide-react";
-import { projects } from "@/data/projects";
-import { ProjectCard } from "./ProjectCard";
 import { H2 } from "@/components/ui/H2";
 import { PurpleText } from "@/components/ui/PurpleText";
+import { projects } from "@/data/projects";
+import { ProjectCard } from "./ProjectCard";
 
 export const Projects = () => {
 	return (
