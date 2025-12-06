@@ -1,3 +1,4 @@
+import { PurpleText } from "@/components/ui/PurpleText";
 import type { Experience } from "@/lib/types";
 
 interface ExperienceTimelineItemProps {
@@ -9,7 +10,7 @@ export const ExperienceTimelineItem = ({
 }: ExperienceTimelineItemProps) => {
 	const highlightList = exp.highlights.map((highlight) => (
 		<li key={highlight} className="flex items-start text-sm text-gray-400">
-			<span className="mr-2 text-purple-500">▹</span>
+			<PurpleText className="mr-2">▹</PurpleText>
 			{highlight}
 		</li>
 	));

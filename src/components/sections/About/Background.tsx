@@ -1,4 +1,5 @@
 import { H3 } from "@/components/ui/H3";
+import { PurpleText } from "@/components/ui/PurpleText";
 
 export const Background = () => {
 	return (
@@ -11,14 +12,14 @@ export const Background = () => {
 			</p>
 			<p className="mb-4 leading-relaxed text-gray-300">
 				I&apos;ve worked at{" "}
-				<span className="font-semibold text-purple-400">Renault</span> as a Data
+				<PurpleText className="font-semibold">Renault</PurpleText> as a Data
 				Engineer and{" "}
-				<span className="font-semibold text-purple-400">Nokia Bell Labs</span>{" "}
+				<PurpleText className="font-semibold">Nokia Bell Labs</PurpleText>{" "}
 				researching ML applications for cybersecurity.
 			</p>
 			<p className="leading-relaxed text-gray-300">
-				Currently seeking opportunities to
-				contribute to global innovation in a cross-cultural environment.
+				Currently seeking opportunities to contribute to global innovation in a
+				cross-cultural environment.
 			</p>
 		</div>
 	);
