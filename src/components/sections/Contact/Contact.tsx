@@ -3,6 +3,7 @@ import { H2 } from "@/components/ui/H2";
 import { PurpleText } from "@/components/ui/PurpleText";
 import { LANGUAGES, PERSONAL_INFO } from "@/lib/constants";
 import { ContactCard } from "./ContactCard";
+import { FormspreeContactForm } from "./FormspreeContactForm";
 
 export const Contact = () => {
 	return (
@@ -17,6 +18,8 @@ export const Contact = () => {
 						Currently seeking full-time opportunities internationally.
 						Let&apos;s connect!
 					</p>
+
+					<FormspreeContactForm />
 
 					<div className="grid gap-6 mb-8 md:grid-cols-2">
 						<ContactCard
