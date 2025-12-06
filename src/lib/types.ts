@@ -43,6 +43,7 @@ export interface PersonalInfo {
 	phone: string;
 	location: string;
 	linkedinUsername: string;
+	githubUsername: string;
 	tagline: string;
 }
 

@@ -7,6 +7,7 @@ export const PERSONAL_INFO: PersonalInfo = {
 	phone: "+33 7 82 71 99 92",
 	location: "Paris, France",
 	linkedinUsername: "benjaminrossignol11",
+	githubUsername: "benjiiross",
 	tagline:
 		"Master's student at EFREI Paris specializing in Data & AI. Building innovative solutions at the intersection of machine learning, cloud computing, and software engineering.",
 };
