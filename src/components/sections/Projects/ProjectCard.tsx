@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 import { H3 } from "@/components/ui/H3";
 import type { Project } from "@/lib/types";
 
@@ -41,6 +42,17 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 					</span>
 				))}
 			</div>
+			{project.github && (
+				<a
+					href={project.github}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 px-4 py-2 mt-4 text-sm font-medium text-white transition-colors bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-purple-600"
+				>
+					<Github className="w-5 h-5" />
+					View on GitHub
+				</a>
+			)}
 		</div>
 	);
 };
