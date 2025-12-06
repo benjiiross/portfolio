@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NAV_ITEMS } from "@/lib/constants";
+import { PurpleText } from "../ui/PurpleText";
 
 export const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export const Navbar = () => {
 		<nav className="fixed top-0 z-50 w-full border-b border-gray-800 bg-gray-950/80 backdrop-blur-lg">
 			<div className="flex items-center justify-between max-w-6xl px-6 py-4 mx-auto">
 				<div className="text-2xl font-bold">
-					<span className="text-purple-500">BR</span>
+					<PurpleText>BR</PurpleText>
 					<span className="text-gray-100">.dev</span>
 				</div>
 
@@ -41,7 +42,7 @@ export const Navbar = () => {
 			{/* Mobile Menu */}
 			{isMenuOpen && (
 				<div className="bg-gray-900 border-t border-gray-800 md:hidden">
-					{NAV_ITEMS.map((item: { label: string; href: string }) => (
+					{NAV_ITEMS.map((item) => (
 						<a
 							key={item.label}
 							href={item.href}

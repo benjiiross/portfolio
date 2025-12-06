@@ -1,5 +1,6 @@
 import { Award, Briefcase, Code2 } from "lucide-react";
 import type { Project } from "@/lib/types";
+import { GITHUB_BASE_URL } from "@/lib/utils";
 
 export const projects: Project[] = [
 	{
@@ -14,7 +15,7 @@ export const projects: Project[] = [
 			"Graph-to-Code Engine",
 			"Back-testing System",
 		],
-		github: "https://github.com/benjiiross",
+		github: `${GITHUB_BASE_URL}/waverr-no-code-financial-strategies`,
 	},
 	{
 		title: "SNCF Data Hackathon",
