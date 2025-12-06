@@ -1,5 +1,8 @@
+import { H3 } from "@/components/ui/H3";
+import { PurpleText } from "@/components/ui/PurpleText";
 import { skills } from "@/data/skills";
-import { H3 } from "./H3";
+import { CertificationBadge } from "./CertificationBadge";
+
 export const SkillsCertifications = () => {
 	return (
 		<div>
@@ -9,7 +12,7 @@ export const SkillsCertifications = () => {
 					<div key={skill.name}>
 						<div className="flex justify-between mb-2">
 							<span className="text-gray-300">{skill.name}</span>
-							<span className="text-purple-400">{skill.level}%</span>
+							<PurpleText>{skill.level}%</PurpleText>
 						</div>
 						<div className="w-full h-2 bg-gray-800 rounded-full">
 							<div
@@ -21,15 +24,9 @@ export const SkillsCertifications = () => {
 				))}
 			</div>
 			<div className="flex flex-wrap gap-2 mt-6">
-				<span className="px-3 py-1 text-sm text-purple-300 border border-purple-700 rounded-full bg-purple-900/50">
-					AWS Certified
-				</span>
-				<span className="px-3 py-1 text-sm text-purple-300 border border-purple-700 rounded-full bg-purple-900/50">
-					Azure AZ-900
-				</span>
-				<span className="px-3 py-1 text-sm text-purple-300 border border-purple-700 rounded-full bg-purple-900/50">
-					Azure AI-900
-				</span>
+				<CertificationBadge>AWS Certified</CertificationBadge>
+				<CertificationBadge>Azure AZ-900</CertificationBadge>
+				<CertificationBadge>Azure AI-900</CertificationBadge>
 			</div>
 		</div>
 	);
