@@ -3,8 +3,6 @@ import type { ComponentProps } from "react";
 interface ButtonProps extends ComponentProps<"button"> {
 	variant?: "primary" | "outline";
 	href?: string;
-	onClick?: () => void;
-	className?: string;
 }
 
 export const Button = ({
@@ -13,6 +11,7 @@ export const Button = ({
 	href,
 	onClick,
 	className = "",
+	...rest
 }: ButtonProps) => {
 	const baseStyles =
 		"px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-block";
@@ -35,7 +34,7 @@ export const Button = ({
 	}
 
 	return (
-		<button onClick={onClick} className={classes} type="button">
+		<button onClick={onClick} className={classes} type="button" {...rest}>
 			{children}
 		</button>
 	);
