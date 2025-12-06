@@ -1,4 +1,6 @@
 import { Linkedin, Mail } from "lucide-react";
+import { H2 } from "@/components/ui/H2";
+import { PurpleText } from "@/components/ui/PurpleText";
 import { LANGUAGES, PERSONAL_INFO } from "@/lib/constants";
 import { ContactCard } from "./ContactCard";
 
@@ -6,9 +8,9 @@ export const Contact = () => {
 	return (
 		<section id="contact" className="px-6 py-20 bg-gray-900">
 			<div className="max-w-3xl mx-auto">
-				<h2 className="mb-12 text-4xl font-bold text-center">
-					Get In <span className="text-purple-500">Touch</span>
-				</h2>
+				<H2>
+					Get In <PurpleText>Touch</PurpleText>
+				</H2>
 
 				<div className="p-8 bg-gray-800 border border-gray-700 rounded-xl">
 					<p className="mb-8 text-center text-gray-300">

@@ -1,14 +1,16 @@
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard";
+import { H2 } from "@/components/ui/H2";
+import { PurpleText } from "@/components/ui/PurpleText";
 
 export const Projects = () => {
 	return (
 		<section id="projects" className="px-6 py-20">
 			<div className="max-w-6xl mx-auto">
-				<h2 className="mb-12 text-4xl font-bold text-center">
-					Featured <span className="text-purple-500">Projects</span>
-				</h2>
+				<H2>
+					Featured <PurpleText>Projects</PurpleText>
+				</H2>
 
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{projects.map((project) => (
