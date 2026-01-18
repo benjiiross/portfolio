@@ -5,7 +5,7 @@ import "./normalize.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Benjamin Rossignol | Data & AI Engineer",
+	title: "Benjamin Rossignol | Data Engineer",
 	description:
 		"Portfolio of Benjamin Rossignol - Master's student in Data & AI at EFREI Paris. Specialized in Machine Learning, Cloud Computing, and Software Engineering.",
 	keywords: [
