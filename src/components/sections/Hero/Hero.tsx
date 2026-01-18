@@ -1,4 +1,4 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { H2 } from "@/components/ui/H2";
 import { socialLinks } from "@/data/social";
@@ -29,6 +29,15 @@ export const Hero = () => {
 
 				<div className="flex flex-wrap justify-center gap-4">
 					<Button href="#projects">View Projects</Button>
+
+					<Button
+						href="/resume-benjamin-rossignol.pdf"
+						className="flex items-center align-middle gap-2"
+					>
+						<FileDown size={18} />
+						Download Resume
+					</Button>
+
 					<Button href="#contact" variant="outline">
 						Get In Touch
 					</Button>
@@ -40,9 +49,9 @@ export const Hero = () => {
 					))}
 				</div>
 
-				<div className="mt-16 animate-bounce">
+				<Button href="#about" className="mt-16 animate-bounce">
 					<ChevronDown size={32} className="mx-auto text-purple-500" />
-				</div>
+				</Button>
 			</div>
 		</section>
 	);

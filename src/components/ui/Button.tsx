@@ -14,7 +14,7 @@ export const Button = ({
 	...rest
 }: ButtonProps) => {
 	const baseStyles =
-		"px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-block";
+		"px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center";
 
 	const variants = {
 		primary:
