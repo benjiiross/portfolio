@@ -1,8 +1,27 @@
-export const skills = [
-	{ name: "Python", level: 95, category: "language" },
-	{ name: "Machine Learning", level: 90, category: "ai" },
-	{ name: "AWS", level: 85, category: "cloud" },
-	{ name: "React", level: 80, category: "web" },
-	{ name: "Azure", level: 85, category: "cloud" },
-	{ name: "SQL", level: 90, category: "data" },
+export const skillGroups = [
+	{
+		category: "Data & AI",
+		skills: [
+			"Python",
+			"Machine Learning",
+			"Scikit-Learn",
+			"Pandas",
+			"Computer Vision",
+			"SQL",
+		],
+	},
+	{
+		category: "Software & Mobile",
+		skills: [
+			"Kotlin Multiplatform",
+			"Jetpack Compose",
+			"Android",
+			"React",
+			"TypeScript",
+		],
+	},
+	{
+		category: "Cloud & Devops",
+		skills: ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD"],
+	},
 ];

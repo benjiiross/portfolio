@@ -1,6 +1,5 @@
 import { H3 } from "@/components/ui/H3";
-import { PurpleText } from "@/components/ui/PurpleText";
-import { skills } from "@/data/skills";
+import { skillGroups } from "@/data/skills";
 import { CertificationBadge } from "./CertificationBadge";
 
 export const SkillsCertifications = () => {
@@ -8,17 +7,23 @@ export const SkillsCertifications = () => {
 		<div>
 			<H3>Skills & Certifications</H3>
 			<div className="space-y-4">
-				{skills.map((skill) => (
-					<div key={skill.name}>
-						<div className="flex justify-between mb-2">
-							<span className="text-gray-300">{skill.name}</span>
-							<PurpleText>{skill.level}%</PurpleText>
-						</div>
-						<div className="w-full h-2 bg-gray-800 rounded-full">
-							<div
-								className="h-2 transition-all duration-1000 rounded-full bg-linear-to-r from-purple-600 to-pink-500"
-								style={{ width: `${skill.level}%` }}
-							/>
+				{skillGroups.map((group) => (
+					<div
+						key={group.category}
+						className="p-5 border rounded-xl border-gray-800 bg-gray-900/50"
+					>
+						<h4 className="mb-3 text-sm font-semibold tracking-wider text-purple-400 uppercase">
+							{group.category}
+						</h4>
+						<div className="flex flex-wrap gap-2">
+							{group.skills.map((skill) => (
+								<span
+									key={skill}
+									className="px-3 py-1 text-sm text-gray-300 border rounded-full border-gray-700 bg-gray-800/50 hover:border-purple-500/50 transition-colors"
+								>
+									{skill}
+								</span>
+							))}
 						</div>
 					</div>
 				))}
