@@ -20,7 +20,7 @@ export const ExperienceTimelineItem = ({
 			key={`${exp.company}-${exp.role}`}
 			className="relative pl-6 border-l-2 border-purple-600"
 		>
-			<div className="absolute top-0 w-4 h-4 bg-purple-600 rounded-full -left-2"></div>
+			<div className="absolute w-4 h-4 bg-purple-600 rounded-full -left-[9px] top-8"></div>
 
 			<div className="p-6 transition-colors bg-gray-800 border border-gray-700 rounded-lg hover:border-purple-600">
 				<h4 className="text-xl font-semibold text-purple-400">{exp.role}</h4>
