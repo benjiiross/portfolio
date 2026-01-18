@@ -6,6 +6,19 @@ interface ProjectCardProps {
 	project: Project;
 }
 
+const formatText = (text: string) => {
+	const parts = text.split(/(\*\*.*?\*\*)/g);
+	return parts.map((part, i) =>
+		part.startsWith("**") && part.endsWith("**") ? (
+			<strong key={i} className="font-bold text-gray-300">
+				{part.slice(2, -2)}
+			</strong>
+		) : (
+			part
+		),
+	);
+};
+
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const Icon = project.icon;
 
@@ -22,7 +35,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 			<div className="flex flex-col items-center grow text-center">
 				<H3>{project.title}</H3>
 				<p className="mb-4 text-sm leading-relaxed text-gray-400">
-					{project.description}
+					{formatText(project.description)}
 				</p>
 
 				<div className="mb-4 space-y-1">
