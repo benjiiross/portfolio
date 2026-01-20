@@ -6,7 +6,7 @@ import { Skills } from "./Skills";
 
 export const About = ({ id }: SectionWrapperProps) => {
 	return (
-		<Section id={id} className="bg-gray-900 px-60 py-28">
+		<Section id={id} className="px-6 bg-gray-900 md:px-60 py-28">
 			<H2>
 				<PurpleText>About</PurpleText> Me
 			</H2>
