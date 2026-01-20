@@ -89,7 +89,7 @@ export const Navbar = () => {
 
 			{/* Mobile Menu Overlay */}
 			<div
-				className={`absolute top-full left-0 w-full bg-gray-950 border-b border-gray-800 md:hidden transition-all duration-300 ease-in-out${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
+				className={`absolute top-full left-0 w-full bg-gray-950 border-b border-gray-800 md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"}`}
 			>
 				<div className="flex flex-col py-2">
 					<NavLinks mobile />
