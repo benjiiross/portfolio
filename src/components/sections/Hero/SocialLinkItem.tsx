@@ -1,8 +1,8 @@
 import type { ComponentProps } from "react";
-import type { SocialLink } from "@/lib/types";
+import type { Social } from "@/data/socials";
 
 interface SocialLinkItemProps extends ComponentProps<"a"> {
-	link: SocialLink;
+	link: Social;
 }
 
 export const SocialLinkItem = ({ link, ...rest }: SocialLinkItemProps) => {
