@@ -1,13 +1,15 @@
 import { Linkedin, Mail } from "lucide-react";
 import { H2 } from "@/components/ui/H2";
 import { PurpleText } from "@/components/ui/PurpleText";
-import { LANGUAGES, PERSONAL_INFO } from "@/lib/constants";
+import { Section, type SectionWrapperProps } from "@/components/ui/Section";
+import { languages } from "@/data/languages";
+import { me } from "@/data/me";
 import { ContactCard } from "./ContactCard";
 import { FormspreeContactForm } from "./FormspreeContactForm";
 
-export const Contact = () => {
+export const Contact = ({ id }: SectionWrapperProps) => {
 	return (
-		<section id="contact" className="px-6 py-20 bg-gray-900">
+		<Section id={id} className="px-6 py-20 bg-gray-900">
 			<div className="max-w-3xl mx-auto">
 				<H2>
 					Get In <PurpleText>Touch</PurpleText>
@@ -25,45 +27,36 @@ export const Contact = () => {
 						<ContactCard
 							icon={Mail}
 							title="Email"
-							value={PERSONAL_INFO.email}
-							href={`mailto:${PERSONAL_INFO.email}`}
+							value={me.email}
+							href={`mailto:${me.email}`}
 						/>
 
 						<ContactCard
 							icon={Linkedin}
 							title="LinkedIn"
-							value={PERSONAL_INFO.linkedinUsername}
-							href={`https://www.linkedin.com/in/${PERSONAL_INFO.linkedinUsername}`}
+							value={me.linkedinUsername}
+							href={`https://www.linkedin.com/in/${me.linkedinUsername}`}
 							target="_blank"
 							rel="noopener noreferrer"
 						/>
 					</div>
 
-					<div className="text-center">
-						<a
-							href={`tel:${PERSONAL_INFO.phone}`}
-							className="inline-block text-purple-400 transition-colors hover:text-purple-300"
-						>
-							📞 {PERSONAL_INFO.phone}
-						</a>
-					</div>
-
 					<div className="pt-8 mt-8 text-center border-t border-gray-700">
-						<p className="mb-4 text-sm text-gray-400">
-							🌍 Based in {PERSONAL_INFO.location} • ✈️ Seeking opportunities
+						<p className="mb-4 text-sm text-gray-300">
+							🌍 Based in {me.location} • ✈️ Seeking opportunities
 							internationally
 						</p>
-						<p className="text-xs text-gray-500">
-							{LANGUAGES.map((lang, idx) => (
+						<p className="text-xs text-gray-400">
+							{languages.map((lang, idx) => (
 								<span key={lang.language}>
 									{lang.flag} {lang.language} ({lang.level})
-									{idx < LANGUAGES.length - 1 ? " • " : ""}
+									{idx < languages.length - 1 ? " • " : ""}
 								</span>
 							))}
 						</p>
 					</div>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };

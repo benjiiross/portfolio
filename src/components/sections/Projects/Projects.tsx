@@ -1,12 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import { H2 } from "@/components/ui/H2";
 import { PurpleText } from "@/components/ui/PurpleText";
+import { Section, type SectionWrapperProps } from "@/components/ui/Section";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard";
 
-export const Projects = () => {
+export const Projects = ({ id }: SectionWrapperProps) => {
 	return (
-		<section id="projects" className="px-6 py-20">
+		<Section id={id} className="px-6 py-20">
 			<div className="max-w-6xl mx-auto">
 				<H2>
 					Featured <PurpleText>Projects</PurpleText>
@@ -29,6 +30,6 @@ export const Projects = () => {
 					</a>
 				</div>
 			</div>
-		</section>
+		</Section>
 	);
 };

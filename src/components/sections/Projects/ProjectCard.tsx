@@ -1,23 +1,11 @@
-import { Github } from "lucide-react";
+import { formatBoldText } from "@/components/sections/Projects/FormatBoldText";
 import { H3 } from "@/components/ui/H3";
-import type { Project } from "@/lib/types";
+import type { Project } from "@/data/projects";
+import { ViewButton } from "./ViewButton";
 
 interface ProjectCardProps {
 	project: Project;
 }
-
-const formatText = (text: string) => {
-	const parts = text.split(/(\*\*.*?\*\*)/g);
-	return parts.map((part, i) =>
-		part.startsWith("**") && part.endsWith("**") ? (
-			<strong key={i} className="font-bold text-gray-300">
-				{part.slice(2, -2)}
-			</strong>
-		) : (
-			part
-		),
-	);
-};
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const Icon = project.icon;
@@ -29,18 +17,18 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 					className="text-purple-500 group-hover:text-purple-400"
 					size={32}
 				/>
-				<span className="text-sm text-gray-500">{project.date}</span>
+				<span className="text-sm text-gray-400">{project.date}</span>
 			</div>
 
-			<div className="flex flex-col items-center grow text-center">
+			<div className="flex flex-col items-center text-center grow">
 				<H3>{project.title}</H3>
 				<p className="mb-4 text-sm leading-relaxed text-gray-400">
-					{formatText(project.description)}
+					{formatBoldText(project.description)}
 				</p>
 
 				<div className="mb-4 space-y-1">
 					{project.highlights.map((highlight) => (
-						<div key={highlight} className="text-xs text-gray-500">
+						<div key={highlight} className="text-xs font-bold text-gray-100">
 							{highlight}
 						</div>
 					))}
@@ -58,19 +46,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 				</div>
 			</div>
 
-			{project.github && (
-				<div className="flex justify-center w-full pt-4 mt-auto border-t border-gray-800/50">
-					<a
-						href={project.github}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-colors bg-gray-800 border border-gray-700 rounded-lg hover:bg-gray-700 hover:border-purple-600"
-					>
-						<Github className="w-5 h-5" />
-						View on GitHub
-					</a>
-				</div>
-			)}
+			<div className="flex flex-wrap items-center justify-center w-full gap-3 pt-4 mt-auto border-t border-gray-800/50">
+				{project.github && <ViewButton href={project.github} />}
+
+				{project.linkedin && (
+					<ViewButton href={project.linkedin} variant="linkedin" />
+				)}
+			</div>
 		</div>
 	);
 };
