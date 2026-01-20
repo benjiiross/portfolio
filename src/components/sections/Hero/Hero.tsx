@@ -1,15 +1,16 @@
 import { ChevronDown, FileDown } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { A } from "@/components/ui/A";
 import { H2 } from "@/components/ui/H2";
-import { socialLinks } from "@/data/social";
-import { PERSONAL_INFO } from "@/lib/constants";
+import { Section, type SectionWrapperProps } from "@/components/ui/Section";
+import { me } from "@/data/me";
+import { socials } from "@/data/socials";
 import { HeroTitle } from "./HeroTitle";
 import { SocialLinkItem } from "./SocialLinkItem";
 
-export const Hero = () => {
+export const Hero = ({ id }: SectionWrapperProps) => {
 	return (
-		<section
-			id="home"
+		<Section
+			id={id}
 			className="flex items-center justify-center min-h-screen px-6 pt-20"
 		>
 			<div className="max-w-4xl mx-auto text-center">
@@ -17,42 +18,40 @@ export const Hero = () => {
 					👋 Hi, I'm
 				</div>
 
-				<HeroTitle>{PERSONAL_INFO.name}</HeroTitle>
+				<HeroTitle>{me.name}</HeroTitle>
 
-				<H2 className="text-2xl font-normal md:text-3xl">
-					{PERSONAL_INFO.title}
-				</H2>
+				<H2 className="text-2xl font-normal md:text-3xl">{me.title}</H2>
 
 				<p className="max-w-2xl mx-auto mb-12 text-lg text-gray-400">
-					{PERSONAL_INFO.tagline}
+					{me.tagline}
 				</p>
 
 				<div className="flex flex-wrap justify-center gap-4">
-					<Button href="#projects">View Projects</Button>
+					<A href="#projects">View Projects</A>
 
-					<Button
+					<A
 						href="/resume-benjamin-rossignol.pdf"
-						className="flex items-center align-middle gap-2"
+						className="flex items-center gap-2 align-middle"
 					>
 						<FileDown size={18} />
 						Download Resume
-					</Button>
+					</A>
 
-					<Button href="#contact" variant="outline">
+					<A href="#contact" variant="outline">
 						Get In Touch
-					</Button>
+					</A>
 				</div>
 
 				<div className="flex justify-center gap-6 mt-12">
-					{socialLinks.map((link) => (
+					{socials.map((link) => (
 						<SocialLinkItem key={link.name} link={link} />
 					))}
 				</div>
 
-				<Button href="#about" className="mt-16 animate-bounce">
+				<A href="#about" className="mt-16 animate-bounce">
 					<ChevronDown size={32} className="mx-auto text-purple-500" />
-				</Button>
+				</A>
 			</div>
-		</section>
+		</Section>
 	);
 };
