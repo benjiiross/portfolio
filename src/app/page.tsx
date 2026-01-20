@@ -1,18 +1,20 @@
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { About } from "@/components/sections/About/About";
-import { Contact } from "@/components/sections/Contact/Contact";
-import { Hero } from "@/components/sections/Hero/Hero";
-import { Projects } from "@/components/sections/Projects/Projects";
+import { router } from "@/lib/router";
 
 const Home = () => {
 	return (
 		<div className="min-h-screen text-gray-100 bg-gray-950">
 			<Navbar />
-			<Hero />
-			<About />
-			<Projects />
-			<Contact />
+
+			<main>
+				{router.map((item) => {
+					const SectionComponent = item.component;
+
+					return <SectionComponent key={item.id} id={item.id} />;
+				})}
+			</main>
+
 			<Footer />
 		</div>
 	);
