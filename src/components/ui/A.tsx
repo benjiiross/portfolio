@@ -1,18 +1,16 @@
 import type { ComponentProps } from "react";
 
-interface ButtonProps extends ComponentProps<"button"> {
+interface AProps extends ComponentProps<"a"> {
 	variant?: "primary" | "outline";
-	href?: string;
 }
 
-export const Button = ({
+export const A = ({
 	children,
 	variant = "primary",
 	href,
-	onClick,
 	className = "",
 	...rest
-}: ButtonProps) => {
+}: AProps) => {
 	const baseStyles =
 		"px-8 py-3 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center";
 
@@ -25,17 +23,9 @@ export const Button = ({
 
 	const classes = `${baseStyles} ${variants[variant]} ${className}`;
 
-	if (href) {
-		return (
-			<a href={href} className={classes}>
-				{children}
-			</a>
-		);
-	}
-
 	return (
-		<button onClick={onClick} className={classes} type="button" {...rest}>
+		<a href={href} className={classes} {...rest}>
 			{children}
-		</button>
+		</a>
 	);
 };
