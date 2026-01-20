@@ -1,13 +1,21 @@
-export const experiences = [
+export interface Experience {
+	role: string;
+	company: string;
+	period: string;
+	location: string;
+	highlights: string[];
+}
+
+export const experiences: Experience[] = [
 	{
 		role: "Data Engineer & Project Manager",
 		company: "RENAULT SAS",
 		period: "Mar 2025 - Sep 2025",
 		location: "Guyancourt, France",
 		highlights: [
-			"Designed centralized database for academy operations",
-			"Analyzed training data from 9 countries, 22 factories",
-			"Built data entry interfaces for 600+ trainers",
+			"Led digital transformation for Global Academy across 9 countries and 22 factories.",
+			"Built custom SQL-backed PowerApps interfaces for 600+ trainers to streamline operations.",
+			"Audited and cleaned complex datasets for 100+ training programs to ensure KPI reliability.",
 		],
 	},
 	{

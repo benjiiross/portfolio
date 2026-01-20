@@ -1,6 +1,23 @@
-import { Award, Briefcase, Code2, Smartphone } from "lucide-react";
-import type { Project } from "@/lib/types";
-import { GITHUB_WAVERR_REPO } from "@/lib/utils";
+import {
+	Award,
+	Briefcase,
+	Code2,
+	type LucideIcon,
+	Smartphone,
+} from "lucide-react";
+import { githubBaseUrl, githubWaverrRepo } from "@/data/urls";
+
+export interface Project {
+	title: string;
+	description: string;
+	tech: string[];
+	date: string;
+	icon: LucideIcon;
+	highlights: string[];
+	github?: string;
+	linkedin?: string;
+	demo?: string;
+}
 
 export const projects: Project[] = [
 	{
@@ -13,28 +30,14 @@ export const projects: Project[] = [
 			"Clean Architecture",
 			"Compottie",
 		],
-		date: "2024 - Present",
+		date: "sep 2025 - Present",
 		icon: Smartphone,
 		highlights: [
 			"100% Shared UI & Logic",
 			"Neo-Brutalist Design System",
 			"Advanced Animations",
 		],
-		github: "https://github.com/benjiiross/dionys_showcase",
-	},
-	{
-		title: "Waverr 🥉",
-		description:
-			"No-code platform to create financial strategies, back-test them and run periodically on brokers. Won 3rd place pitching in front of **Microsoft**, **Thales**, and **Capgemini**.",
-		tech: ["React", "Python", "Graph Theory", "Financial APIs"],
-		date: "Apr 2024 - Jul 2024",
-		icon: Award,
-		highlights: [
-			"🥉 3rd Place Winner",
-			"Graph-to-Code Engine",
-			"Back-testing System",
-		],
-		github: GITHUB_WAVERR_REPO,
+		github: `${githubBaseUrl}/dionys_showcase`,
 	},
 	{
 		title: "SNCF Data Hackathon 🥉",
@@ -48,20 +51,25 @@ export const projects: Project[] = [
 			"Accessibility Analysis",
 			"Air Quality Monitoring",
 		],
+		github: `${githubBaseUrl}/sncf-cloud-challenge`,
+		linkedin:
+			"https://www.linkedin.com/posts/mghassany_cest-le-rendez-vous-annuel-pour-les-%C3%A9tudiants-ugcPost-7208940838821711874-IakN?",
 	},
 	{
-		title: "VoteVest 🥈",
+		title: "Waverr 🥉",
 		description:
-			"**Decentralized crowdfunding platform** featuring an alternative dividend system based on **blockchain governance**.",
-		tech: ["Blockchain", "Smart Contracts", "Fintech", "Web3"],
-		date: "2023 - 2024",
+			"No-code platform to create financial strategies, back-test them and run periodically on brokers. Won 3rd place pitching in front of **Microsoft**, **Thales**, and **Capgemini**.",
+		tech: ["React", "Python", "Graph Theory", "Financial APIs"],
+		date: "Apr 2024 - Jul 2024",
 		icon: Award,
 		highlights: [
-			"🥈 2nd Place Winner - EFREI Tech Day",
-			"Blockchain-based Governance",
-			"Alternative Dividend Logic",
+			"🥉 3rd Place Winner",
+			"Graph-to-Code Engine",
+			"Back-testing System",
 		],
-		github: "https://github.com/benjiiross/VoteVestShowcase",
+		github: githubWaverrRepo,
+		linkedin:
+			"https://www.linkedin.com/posts/benjaminrossignol11_datascience-artificialintelligence-finance-activity-7217278801930563584-cXzp",
 	},
 	{
 		title: "IDS Dashboard - Nokia Bell Labs",
@@ -75,5 +83,19 @@ export const projects: Project[] = [
 			"4,000+ Lines Codebase Refactor",
 			"Interactive ML Simulations",
 		],
+	},
+	{
+		title: "VoteVest 🥈",
+		description:
+			"**Decentralized crowdfunding platform** featuring an alternative dividend system based on **blockchain governance**.",
+		tech: ["Blockchain", "Smart Contracts", "Fintech", "Web3"],
+		date: "Feb 2023 - Jun 2023",
+		icon: Award,
+		highlights: [
+			"🥈 2nd Place Winner - EFREI Tech Day",
+			"Blockchain-based Governance",
+			"Alternative Dividend Logic",
+		],
+		github: `${githubBaseUrl}/VoteVest`,
 	},
 ];

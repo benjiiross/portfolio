@@ -1,4 +1,9 @@
-export const skillGroups = [
+export interface Skill {
+	category: string;
+	skills: string[];
+}
+
+export const skills: Skill[] = [
 	{
 		category: "Data & AI",
 		skills: [
