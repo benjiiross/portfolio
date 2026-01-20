@@ -1,12 +1,12 @@
 export interface Skill {
 	category: string;
-	skills: string[];
+	keywords: string[];
 }
 
 export const skills: Skill[] = [
 	{
 		category: "Data & AI",
-		skills: [
+		keywords: [
 			"Python",
 			"Machine Learning",
 			"Scikit-Learn",
@@ -17,7 +17,7 @@ export const skills: Skill[] = [
 	},
 	{
 		category: "Software & Mobile",
-		skills: [
+		keywords: [
 			"Kotlin Multiplatform",
 			"Jetpack Compose",
 			"Android",
@@ -27,6 +27,6 @@ export const skills: Skill[] = [
 	},
 	{
 		category: "Cloud & Devops",
-		skills: ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD"],
+		keywords: ["AWS", "Azure", "Docker", "GitHub Actions", "CI/CD"],
 	},
 ];

@@ -15,7 +15,7 @@ export const Skills = () => {
 							{group.category}
 						</h4>
 						<div className="flex flex-wrap gap-2">
-							{group.skills.map((skill) => (
+							{group.keywords.map((skill) => (
 								<span
 									key={skill}
 									className="px-3 py-1 text-sm text-gray-300 transition-colors border border-gray-700 rounded-full bg-gray-800/50 hover:border-purple-500/50"
