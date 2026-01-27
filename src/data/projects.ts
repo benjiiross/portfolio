@@ -3,6 +3,7 @@ import {
 	Briefcase,
 	Code2,
 	type LucideIcon,
+	Shirt,
 	Smartphone,
 } from "lucide-react";
 import { githubBaseUrl, githubWaverrRepo } from "@/data/urls";
@@ -70,6 +71,28 @@ export const projects: Project[] = [
 		github: githubWaverrRepo,
 		linkedin:
 			"https://www.linkedin.com/posts/benjaminrossignol11_datascience-artificialintelligence-finance-activity-7217278801930563584-cXzp",
+	},
+	{
+		title: "TryMe (Tech Lead)",
+		description:
+			"AI-powered virtual try-on ecosystem. Built as a **Monorepo** featuring a Chrome extension and a web dashboard to visualize 3D mannequins from e-commerce product pages.",
+		tech: [
+			"Turborepo",
+			"Next.js 15",
+			"WXT (Web Extension)",
+			"FastAPI",
+			"Poetry",
+			"TailwindCSS",
+		],
+		date: "Jan 2024 - Jun 2024",
+		icon: Shirt,
+		highlights: [
+			"Monorepo Architecture (Turbo)",
+			"ML Pipeline (FastAPI & Rembg)",
+			"3D Model Visualization",
+			"Cross-browser Extension",
+		],
+		github: `${githubBaseUrl}/TryMeShowcase`,
 	},
 	{
 		title: "IDS Dashboard - Nokia Bell Labs",
